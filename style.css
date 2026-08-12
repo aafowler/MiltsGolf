@@ -49,7 +49,7 @@ section {
   padding: 0 24px;
 }
 
-/* ---------- Header / nav ---------- */
+/*Header*/
 #top-bar {
   background: var(--maroon-dark);
   display: flex;
@@ -90,7 +90,7 @@ section {
   border-color: var(--pink);
 }
 
-/* Hamburger button — hidden on desktop, shown on mobile */
+/* Hamburger*/
 #menu-btn {
   display: none;
   flex-direction: column;
@@ -128,7 +128,7 @@ section {
   opacity: 1;
 }
 
-/* ---------- Hero ---------- */
+/* Style*/
 .hero {
   background: linear-gradient(160deg, var(--maroon) 0%, var(--maroon-dark) 100%);
   color: #fff;
@@ -157,7 +157,7 @@ section {
   font-size: 1.05rem;
 }
 
-/* ---------- Section headings ---------- */
+/*headings*/
 .section-title {
   text-align: center;
   font-family: Georgia, 'Times New Roman', serif;
@@ -173,7 +173,7 @@ section {
   max-width: 560px;
 }
 
-/* ---------- Feature / service cards ---------- */
+/* Features*/
 main {
   display: block;
 }
@@ -235,7 +235,7 @@ main {
   color: var(--maroon-dark);
 }
 
-/* ---------- Alternating band sections ---------- */
+/* Bands*/
 .band {
   padding: 64px 24px;
 }
@@ -244,7 +244,7 @@ main {
   background: var(--pink-light);
 }
 
-/* ---------- Hours table ---------- */
+/*Hours*/
 .hours-grid {
   display: flex;
   flex-wrap: wrap;
@@ -292,7 +292,7 @@ main {
   margin-top: 16px;
 }
 
-/* ---------- Course section ---------- */
+/*Course*/
 .course-content {
   max-width: 700px;
   margin: 0 auto;
@@ -300,7 +300,7 @@ main {
   color: var(--text-soft);
 }
 
-/* ---------- Scorecard ---------- */
+/*Scorecard*/
 .table-scroll {
   position: relative;
   max-width: var(--max-width);
@@ -357,7 +357,7 @@ main {
   background: var(--cream);
 }
 
-/* ---------- Contact ---------- */
+/*Contact*/
 .contact-grid {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -397,7 +397,7 @@ main {
   display: block;
 }
 
-/* ---------- Footer ---------- */
+/*Footer*/
 footer {
   background: var(--maroon-dark);
   color: var(--pink-light);
@@ -424,7 +424,7 @@ footer a {
   margin: 0;
 }
 
-/* ---------- Mobile nav ---------- */
+/*Mobile nav*/
 @media (max-width: 760px) {
   #menu-btn {
     display: flex;
