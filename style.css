@@ -305,9 +305,13 @@ main {
   position: relative;
   max-width: var(--max-width);
   margin: 32px auto 0;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.table-scroll-inner {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
 
@@ -480,6 +484,12 @@ footer a {
     pointer-events: none;
     background: linear-gradient(to right, rgba(90, 0, 27, 0), rgba(90, 0, 27, 0.28));
     border-radius: 0 var(--radius) var(--radius) 0;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+
+  .table-scroll.at-end::after {
+    opacity: 0;
   }
 
   .footer-contact {

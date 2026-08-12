@@ -108,6 +108,7 @@
                 </div>
 
                 <div class="table-scroll">
+                  <div class="table-scroll-inner">
                     <table class="scorecard-table">
                         <thead>
                             <tr>
@@ -156,6 +157,7 @@
                             </tr>
                         </tbody>
                     </table>
+                  </div>
                 </div>
             </section>
 
@@ -270,6 +272,18 @@
                     if (sideMenu.classList.contains('open')) toggleMenu();
                 });
             });
+
+            const tableScroll = document.querySelector('.table-scroll');
+            const tableScrollInner = document.querySelector('.table-scroll-inner');
+            if (tableScroll && tableScrollInner) {
+                function updateScrollFade() {
+                    const atEnd = tableScrollInner.scrollLeft + tableScrollInner.clientWidth >= tableScrollInner.scrollWidth - 1;
+                    tableScroll.classList.toggle('at-end', atEnd);
+                }
+                tableScrollInner.addEventListener('scroll', updateScrollFade);
+                window.addEventListener('resize', updateScrollFade);
+                updateScrollFade();
+            }
         </script>
     </body>
 </html>
