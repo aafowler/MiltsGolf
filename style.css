@@ -27,6 +27,7 @@ body {
   color: var(--text);
   background: var(--cream);
   line-height: 1.6;
+  padding-bottom: 62px;
 }
 
 img {
@@ -57,7 +58,7 @@ section {
   padding: 10px 24px;
   position: sticky;
   top: 0;
-  z-index: 40;
+  z-index: 55;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -116,7 +117,7 @@ section {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(20, 0, 8, 0.55);
+  background: rgba(15, 0, 6, 0.8);
   z-index: 45;
   opacity: 0;
   transition: opacity 0.25s ease;
@@ -400,8 +401,15 @@ footer {
   background: var(--maroon-dark);
   color: var(--pink-light);
   text-align: center;
-  padding: 28px 24px;
+  padding: 16px 24px;
   font-size: 0.9rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3);
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
 
 footer a {
@@ -412,7 +420,7 @@ footer a {
 .footer-contact {
   color: #fff;
   font-weight: 600;
-  margin: 0 0 8px;
+  margin: 0;
 }
 
 /* ---------- Mobile nav ---------- */
@@ -428,7 +436,7 @@ footer a {
     height: 100vh;
     width: min(72vw, 300px);
     margin: 0;
-    background: var(--maroon-dark);
+    background: var(--pink-light);
     flex-direction: column;
     align-items: flex-start;
     padding: 90px 28px;
@@ -441,6 +449,20 @@ footer a {
 
   #side-menu.open {
     transform: translateX(0);
+  }
+
+  #side-menu a {
+    color: var(--maroon-dark);
+  }
+
+  #side-menu a:hover,
+  #side-menu a:focus-visible {
+    color: var(--maroon);
+    border-color: var(--maroon);
+  }
+
+  body {
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
   }
 
   .hero {
@@ -469,6 +491,14 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 40px 16px;
+  }
+
+  .features .card:last-child:nth-child(odd),
+  .services-grid .card:last-child:nth-child(odd),
+  .contact-grid .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 6px);
+    margin: 0 auto;
   }
 
   .card {
